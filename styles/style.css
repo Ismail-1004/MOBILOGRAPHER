@@ -1,0 +1,319 @@
+@import 'fonts.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+
+  font-family: var(--mr400);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --mr400: 'Montserrat-Regular';
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* header start */
+
+.header {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.header img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.607);
+  backdrop-filter: blur(15px);
+
+  /* position: fixed;
+  width: 100%; */
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 20px;
+
+  display: none;
+}
+
+.header__nav-link {
+  color:  #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.header__nav-menu {
+  display: none;
+}
+
+.header__content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.header__content-content {
+  padding: 0 15px 15px 15px;
+  text-align: center;
+  color: white;
+}
+
+.header__content-title {
+  margin-bottom: 7px;
+}
+
+.header__content-text {
+  font-size: 20px;
+}
+
+/* header end */
+/* ************************ */
+
+/* main start */
+
+.main {
+  padding: 50px 0;
+}
+
+.main__about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__about-me {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__about-me-title {
+  margin-bottom: 20px;
+}
+
+.main__about-text {
+  text-align: center;
+}
+
+.main__about-text:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.main__price {
+  margin-top: 80px;
+}
+
+.main__price-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__price-price {
+  margin-top: 30px;
+}
+
+.main__price-price h2 {
+  margin-bottom: 20px;
+}
+
+.main__price-price li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.main__gallery img {
+  width: 300px;
+}
+
+.main__gallery {
+  margin-top: 80px;
+}
+
+.main__gallery-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.main__gallery-photos {
+  margin-top: 20px;
+}
+
+.main__gallery-photos:not(:last-child) {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__gallery-photos:last-child {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* main end */
+/* ************************* */
+
+/* footer start */
+
+.footer {
+  background: rgba(0, 0, 0, 0.721);
+  backdrop-filter: blur(15px);
+  padding: 20px 0;
+
+  color: white;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__content-info {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer__content-name {
+  margin-bottom: 10px;
+}
+
+.footer__content-phone {
+  color: white;
+  margin: 20px 0;
+}
+
+.footer__content-inst-link {
+  color: white;
+}
+
+/* footer end */
+/* ************************* */
+
+
+/* media start */
+
+@media (max-width: 1200px) {
+  .container {
+    width: 992px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 576px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .header__content-text {
+    font-size: 16px;
+  }
+
+  .header__nav {
+    justify-content: flex-end;
+  }
+
+  .header__nav-list {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    background: rgba(0, 0, 0, 0.79);
+    backdrop-filter: blur(25px);
+  }
+
+  .header__nav-menu {
+    display: block;
+  }
+
+  .main__about-me-title {
+    text-align: center;
+    line-height: 30px;
+  }
+
+  .main__about-text {
+    font-size: 14px;
+  }
+
+  .main__price-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main__price-price h2 {
+    font-size: 18px;
+    text-align: center;
+    line-height: 30px;
+  }
+
+  .main__price-price ol {
+    text-align: center;
+  }
+
+  .main__price-price ol li {
+    font-size: 15px;
+  }
+  
+  .main__gallery img {
+    width: 100%;
+  }
+
+  .main__gallery-photos {
+    flex-direction: column;
+  }
+
+  .main__gallery-photos img:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+/* media end */
+/* ************************ */
